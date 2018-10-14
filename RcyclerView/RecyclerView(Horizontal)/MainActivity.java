@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
-
+        init();
         /*
         * ListView 是自己处理布局排列的
         * 但是RecyclerView得交由LinearLayoutManager来处理*/
