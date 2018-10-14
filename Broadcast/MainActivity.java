@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         intentFilter = new IntentFilter();
-        intentFilter.addAction("android.net.conn.CONNECTITY_CHANGE"); //如果改变网络状态的话，系统会发出android.net.conn.CONNECTITY_CHANGE的广播
+        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE"); //如果改变网络状态的话，系统会发出android.net.conn.CONNECTITY_CHANGE的广播
+
+        NetWorkChangeReceiver netWorkChangeReceiver = new NetWorkChangeReceiver();
         registerReceiver(netWorkChangeReceiver,intentFilter); //注册接收器，第一个参数表明用什么样的接收器，第二个参数表明要接收什么样的广播
     }
 
